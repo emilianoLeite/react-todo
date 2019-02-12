@@ -1,9 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import TodoInput from './todo-input';
+import React from "react";
+import { shallow } from "enzyme";
+import TodoInput from "./todo-input";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<TodoInput onCreateTodo={() => { }}/>, div);
-  ReactDOM.unmountComponentAtNode(div);
+it("renders without crashing", () => {
+  shallow(<TodoInput onCreateTodo={() => { }} />);
 });

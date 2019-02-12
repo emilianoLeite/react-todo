@@ -1,9 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import TodoList from './todo-list';
+import React from "react";
+import { shallow } from "enzyme";
+import TodoList from "./todo-list";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<TodoList />, div);
-  ReactDOM.unmountComponentAtNode(div);
+it("renders without crashing", () => {
+  shallow(<TodoList />);
 });
