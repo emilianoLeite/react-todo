@@ -1,3 +1,26 @@
+# React TODO
+
+## Features to do
+
+- [ ] Basic TODO app
+  - [x] Create TODO
+  - [x] List TODOs
+  - [ ] Update TODO
+  - [x] Complete TODO
+  - [ ] Filter TODOs
+- [x] Enzyme
+- [x] Snapshot testing
+- [ ] CI
+- [ ] Redux
+- [ ] CSS modules
+- [ ] CSS-in-JS
+- [ ] flow
+- [ ] typescript
+- [ ] GraphQL
+- [ ] react-testing-library
+
+__________
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
