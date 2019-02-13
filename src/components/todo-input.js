@@ -13,7 +13,7 @@ export default class TodoInput extends React.Component {
     if (pressedKey === this.ENTER_KEY) {
       this.props.onCreateTodo(event.target.value);
     }
-  }
+  };
 }
 
 TodoInput.propTypes = {
