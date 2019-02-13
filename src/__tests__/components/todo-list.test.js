@@ -1,29 +1,30 @@
-import React from "react";
-import { shallow } from "enzyme";
+import React from 'react';
+import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
-import TodoList from "../../components/todo-list";
+import Todo from '../../models/todo';
+import TodoList from '../../components/todo-list';
 
-it("renders without crashing", () => {
+it('renders without crashing', () => {
   shallow(<TodoList />);
 });
 
-describe("when no todos are supplied", () => {
-  it("renders a empty list", () => {
-    let wrapper = shallow(<TodoList />);
+describe('when no todos are supplied', () => {
+  it('renders a empty list', () => {
+    const wrapper = shallow(<TodoList />);
 
     expect(wrapper.find('ul').children()).toHaveLength(0);
   });
 });
 
-describe("when some todos are supplied", () => {
-  it("correctly renders the todo list", () => {
-    let todos = [
+describe('when some todos are supplied', () => {
+  it('correctly renders the todo list', () => {
+    const todos = [
       { text: 'todo1' },
       { text: 'todo2', completed: true },
     ];
-    let wrapper = shallow(<TodoList todos={todos}/>);
-    let listItems = wrapper.find('ul').children()
+    const wrapper = shallow(<TodoList todos={todos} />);
+    const listItems = wrapper.find('ul').children();
 
     expect(listItems).toHaveLength(2);
     expect(listItems.at(0).text()).toMatch('todo1');
@@ -31,12 +32,12 @@ describe("when some todos are supplied", () => {
     expect(listItems.at(1).hasClass('completed')).toEqual(true);
   });
 
-  it("matches snapshot", () => {
+  it('matches snapshot', () => {
     /*
       this is redundant (regarding the previous test), but it seems to be the
       preferred way of testing component rendering
     */
-    let todos = [
+    const todos = [
       { text: 'todo1' },
       { text: 'todo2', completed: true },
     ];
@@ -48,7 +49,7 @@ describe("when some todos are supplied", () => {
 
 
 
-  describe("when a todo is clicked", () => {
-    xit("emits the updated todo to the supplied callback", () => { });
+  describe('when a todo is clicked', () => {
+    it.todo('emits the updated todo to the supplied callback');
   });
 });

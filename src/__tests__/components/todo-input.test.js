@@ -9,8 +9,8 @@ it('renders without crashing', () => {
 
 describe('when the user presses the ENTER key inside the input', () => {
   it('calls the onCreateTodo callback', () => {
-    let createTodoCallback = jest.fn();
-    let wrapper = shallow(<TodoInput onCreateTodo={createTodoCallback} />);
+    const createTodoCallback = jest.fn();
+    const wrapper = shallow(<TodoInput onCreateTodo={createTodoCallback} />);
 
     wrapper.find('input').simulate('keyPress', { target: { value: 'myNewTodo' }, keyCode: 13 });
 
@@ -18,7 +18,7 @@ describe('when the user presses the ENTER key inside the input', () => {
   });
 
   it('clears the input', () => {
-    let wrapper = shallow(<TodoInput onCreateTodo={() => { }} />);
+    const wrapper = shallow(<TodoInput onCreateTodo={() => { }} />);
     wrapper.setState({ value: 'previousContent' });
 
     wrapper.find('input').simulate('keyPress', { target: { value: 'myNewTodo' }, keyCode: 13 });

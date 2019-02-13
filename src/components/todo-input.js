@@ -1,32 +1,36 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 export default class TodoInput extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { value: '' };
+
     this.ENTER_KEY = 13;
-    this.state = { value: "" };
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.clearInput = this.clearInput.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleKeyPress = (event) => {
-    let pressedKey = (event.keyCode ? event.keyCode : event.which);
+  handleKeyPress(event){
+    const pressedKey = (event.keyCode ? event.keyCode : event.which);
 
     if (pressedKey === this.ENTER_KEY) {
       this.props.onCreateTodo(event.target.value);
       this.clearInput();
     }
-  };
+  }
 
-  clearInput = () => { this.setState({ value: "" }) };
+  clearInput(){ this.setState({ value: '' }); }
 
-  handleChange = (event) => {
+  handleChange(event){
     this.setState({ value: event.target.value });
-  };
+  }
 
   render() { return (
     <input
-      type="text"
-      placeholder="New todo..."
+      type='text'
+      placeholder='New todo...'
       value={this.state.value}
       onKeyPress={this.handleKeyPress}
       onChange={this.handleChange}
