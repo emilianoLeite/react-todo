@@ -14,7 +14,6 @@ describe("when the user presses the ENTER key inside the input", () => {
 
     wrapper.find('input').simulate('keyPress', { target: { value: 'myNewTodo' }, keyCode: 13 });
 
-    expect(createTodoCallback.mock.calls.length).toBe(1);
-    expect(createTodoCallback.mock.calls[0][0]).toBe('myNewTodo');
+    expect(createTodoCallback).toBeCalledWith('myNewTodo');
   });
 });
