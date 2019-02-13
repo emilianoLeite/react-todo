@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allows the creation and listing of todos 1`] = `
+<div
+  className="App"
+>
+  <input
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="New todo..."
+    type="text"
+    value=""
+  />
+  <ul />
+</div>
+`;
+
+exports[`allows the creation and listing of todos 2`] = `
+<div
+  className="App"
+>
+  <input
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="New todo..."
+    type="text"
+    value=""
+  />
+  <ul>
+    <li
+      className=""
+      onClick={[Function]}
+    >
+      myNewTodo
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`allows the creation and listing of todos 3`] = `
+<div
+  className="App"
+>
+  <input
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="New todo..."
+    type="text"
+    value=""
+  />
+  <ul>
+    <li
+      className=""
+      onClick={[Function]}
+    >
+      myNewTodo
+    </li>
+    <li
+      className=""
+      onClick={[Function]}
+    >
+      myNewTodo2
+    </li>
+  </ul>
+</div>
+`;

@@ -47,9 +47,18 @@ describe('when some todos are supplied', () => {
     expect(tree).toMatchSnapshot();
   });
 
-
-
   describe('when a todo is clicked', () => {
-    it.todo('emits the updated todo to the supplied callback');
+    it('emits the index of the clicked todo to the supplied callback', () => {
+      const handleCompletedTodoCallback = jest.fn();
+      const todos = [new Todo({text: 'Todo', completed: false})];
+      const wrapper = shallow(<TodoList
+        onToggledTodo={handleCompletedTodoCallback}
+        todos={todos}
+      />);
+
+      wrapper.find('li').simulate('click');
+
+      expect(handleCompletedTodoCallback).toHaveBeenCalledWith(0);
+    });
   });
 });

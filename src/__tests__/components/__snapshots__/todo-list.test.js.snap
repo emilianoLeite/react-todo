@@ -4,11 +4,13 @@ exports[`when some todos are supplied matches snapshot 1`] = `
 <ul>
   <li
     className=""
+    onClick={[Function]}
   >
     todo1
   </li>
   <li
     className="completed"
+    onClick={[Function]}
   >
     todo2
   </li>

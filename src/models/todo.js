@@ -1,6 +1,6 @@
 export default class Todo {
-  static for(arrayOfTodoProps) {
-    return arrayOfTodoProps.map(todoProps => new Todo(todoProps))
+  static wrap(arrayOfTodoProps) {
+    return arrayOfTodoProps.map(todoProps => new Todo(todoProps));
   }
 
   constructor({ text, completed }) {
