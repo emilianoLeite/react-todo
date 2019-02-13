@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 export default class TodoInput extends React.Component {
-  ENTER_KEY = 13;
-
   constructor(props) {
     super(props);
+    this.ENTER_KEY = 13;
     this.state = { value: "" };
   }
 
@@ -14,8 +13,12 @@ export default class TodoInput extends React.Component {
 
     if (pressedKey === this.ENTER_KEY) {
       this.props.onCreateTodo(event.target.value);
+      this.clearInput();
     }
   };
+
+  clearInput = () => { this.setState({ value: "" }) };
+
   handleChange = (event) => {
     this.setState({ value: event.target.value });
   };
