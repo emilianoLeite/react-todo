@@ -1,7 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
-import TodoList from "./todo-list";
 import renderer from 'react-test-renderer';
+
+import TodoList from "../../components/todo-list";
 
 it("renders without crashing", () => {
   shallow(<TodoList />);
