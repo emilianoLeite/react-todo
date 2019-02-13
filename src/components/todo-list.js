@@ -6,7 +6,11 @@ export default function TodoList(props) {
     <ul>
       {
         props.todos.map((todo, index) => {
-          return <li key={index}> {todo} </li>;
+          return (
+            <li className={todo.completed ? 'completed' : ''} key={index}>
+              {todo.text}
+            </li>
+          );
         })
       }
     </ul>
@@ -14,7 +18,10 @@ export default function TodoList(props) {
 }
 
 TodoList.propTypes = {
-  todos: PropTypes.array
+  todos: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    completed: PropTypes.bool
+  }))
 };
 
 TodoList.defaultProps = {
