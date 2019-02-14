@@ -9,8 +9,8 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { todos: this.getTodos() };
-    this.setTodos = this.setTodos.bind(this);
-    this.updateTodo = this.updateTodo.bind(this);
+    this.setTodo = this.setTodo.bind(this);
+    this.toggleTodoCompletion = this.toggleTodoCompletion.bind(this);
     this.commitChanges = this.commitChanges.bind(this);
   }
 
@@ -24,13 +24,13 @@ export default class App extends Component {
     }
   }
 
-  setTodos(todoText){
+  setTodo(todoText) {
     const newTodo = new Todo({ text: todoText });
     const todos = this.state.todos.concat(newTodo);
     this.commitChanges(todos);
   }
 
-  updateTodo(todoIndex){
+  toggleTodoCompletion(todoIndex) {
     const todos = this.state.todos;
     todos[todoIndex] = todos[todoIndex].toggleCompletion();
     this.commitChanges(todos);
@@ -43,12 +43,11 @@ export default class App extends Component {
 
   render() { return (
     <div className="App">
-      <TodoInput onCreateTodo={this.setTodos}/>
+      <TodoInput onCreateTodo={this.setTodo}/>
       <TodoList
-        onToggledTodo={this.updateTodo}
+        onClickedTodo={this.toggleTodoCompletion}
         todos={this.state.todos}
       />
     </div>
-  );
-  }
+  );}
 }

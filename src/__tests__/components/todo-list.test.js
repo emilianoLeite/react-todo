@@ -5,13 +5,10 @@ import renderer from 'react-test-renderer';
 import Todo from '../../models/todo';
 import TodoList from '../../components/todo-list';
 
-it('renders without crashing', () => {
-  shallow(<TodoList />);
-});
 
 describe('when no todos are supplied', () => {
   it('renders a empty list', () => {
-    const wrapper = shallow(<TodoList />);
+    const wrapper = shallow(<TodoList onClickedTodo={() => { }} />);
 
     expect(wrapper.find('ul').children()).toHaveLength(0);
   });
@@ -23,7 +20,7 @@ describe('when some todos are supplied', () => {
       { text: 'todo1' },
       { text: 'todo2', completed: true },
     ];
-    const wrapper = shallow(<TodoList todos={todos} />);
+    const wrapper = shallow(<TodoList onClickedTodo={() => { }} todos={todos} />);
     const listItems = wrapper.find('ul').children();
 
     expect(listItems).toHaveLength(2);
@@ -42,7 +39,7 @@ describe('when some todos are supplied', () => {
       { text: 'todo2', completed: true },
     ];
     const tree = renderer
-      .create(<TodoList todos={todos} />)
+      .create(<TodoList onClickedTodo={() => { }} todos={todos} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -52,7 +49,7 @@ describe('when some todos are supplied', () => {
       const handleCompletedTodoCallback = jest.fn();
       const todos = [new Todo({text: 'Todo', completed: false})];
       const wrapper = shallow(<TodoList
-        onToggledTodo={handleCompletedTodoCallback}
+        onClickedTodo={handleCompletedTodoCallback}
         todos={todos}
       />);
 

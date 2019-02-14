@@ -18,7 +18,7 @@ const createNewTodo = (todoText) => {
   subject.find('TodoInput').simulate('keyPress', { target: { value: todoText }, keyCode: 13 });
 };
 
-it('allows the creation and listing of todos', () => {
+test('allows the creation and listing of todos', () => {
   let currentSnapshot = renderer
     .create(subject)
     .toJSON();

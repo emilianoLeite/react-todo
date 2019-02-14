@@ -8,7 +8,7 @@ export default class TodoList extends React.Component {
   }
 
   handleClick(index) {
-    this.props.onToggledTodo(index);
+    this.props.onClickedTodo(index);
   }
 
   render() {
@@ -37,7 +37,7 @@ TodoList.propTypes = {
     text: PropTypes.string.isRequired,
     completed: PropTypes.bool
   })),
-  onToggledTodo: PropTypes.func.isRequired
+  onClickedTodo: PropTypes.func.isRequired
 };
 
 TodoList.defaultProps = {
