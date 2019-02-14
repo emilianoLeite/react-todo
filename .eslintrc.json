@@ -40,6 +40,20 @@
         "prefer-const": [
             "error"
         ],
+        "sort-imports": [
+            "warn",
+            {
+                "ignoreCase": false,
+                "ignoreDeclarationSort": false,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": [
+                    "none",
+                    "all",
+                    "multiple",
+                    "single"
+                ]
+            }
+        ],
         "jest/consistent-test-it": "warn",
         "jest/expect-expect": "error",
         "jest/no-identical-title": "error",

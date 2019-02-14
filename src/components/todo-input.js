@@ -1,5 +1,6 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
+
 export default class TodoInput extends React.Component {
   constructor(props) {
     super(props);
