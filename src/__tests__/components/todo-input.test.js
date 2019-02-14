@@ -3,9 +3,6 @@ import { shallow } from 'enzyme';
 
 import TodoInput from '../../components/todo-input';
 
-it('renders without crashing', () => {
-  shallow(<TodoInput onCreateTodo={() => { }} />);
-});
 
 describe('when the user presses the ENTER key inside the input', () => {
   it('calls the onCreateTodo callback', () => {
