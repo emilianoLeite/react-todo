@@ -11,7 +11,9 @@ exports[`allows the creation and listing of todos 1`] = `
     type="text"
     value=""
   />
-  <ul />
+  <ul
+    className="todo-list"
+  />
 </div>
 `;
 
@@ -26,11 +28,16 @@ exports[`allows the creation and listing of todos 2`] = `
     type="text"
     value=""
   />
-  <ul>
+  <ul
+    className="todo-list"
+  >
     <li
       className=""
-      onClick={[Function]}
     >
+      <input
+        onClick={[Function]}
+        type="checkbox"
+      />
       myNewTodo
     </li>
   </ul>
@@ -48,17 +55,25 @@ exports[`allows the creation and listing of todos 3`] = `
     type="text"
     value=""
   />
-  <ul>
+  <ul
+    className="todo-list"
+  >
     <li
       className=""
-      onClick={[Function]}
     >
+      <input
+        onClick={[Function]}
+        type="checkbox"
+      />
       myNewTodo
     </li>
     <li
       className=""
-      onClick={[Function]}
     >
+      <input
+        onClick={[Function]}
+        type="checkbox"
+      />
       myNewTodo2
     </li>
   </ul>

@@ -1,17 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`when some todos are supplied matches snapshot 1`] = `
-<ul>
+<ul
+  className="todo-list"
+>
   <li
     className=""
-    onClick={[Function]}
   >
+    <input
+      onClick={[Function]}
+      type="checkbox"
+    />
     todo1
   </li>
   <li
     className="completed"
-    onClick={[Function]}
   >
+    <input
+      onClick={[Function]}
+      type="checkbox"
+    />
     todo2
   </li>
 </ul>

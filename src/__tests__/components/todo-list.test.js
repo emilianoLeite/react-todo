@@ -44,7 +44,7 @@ describe('when some todos are supplied', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  describe('when a todo is clicked', () => {
+  describe('when a todo\'s checkbox is clicked', () => {
     it('emits the index of the clicked todo to the supplied callback', () => {
       const handleCompletedTodoCallback = jest.fn();
       const todos = [new Todo({text: 'Todo', completed: false})];
@@ -53,7 +53,11 @@ describe('when some todos are supplied', () => {
         todos={todos}
       />);
 
-      wrapper.find('li').simulate('click');
+      wrapper.find('input[type="checkbox"]').simulate('click');
+
+      expect(handleCompletedTodoCallback).toHaveBeenCalledWith(0);
+    });
+  });
 
       expect(handleCompletedTodoCallback).toHaveBeenCalledWith(0);
     });

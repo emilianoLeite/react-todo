@@ -13,15 +13,15 @@ export default class TodoList extends React.Component {
 
   render() {
     return (
-      <ul>
+      <ul className="todo-list">
         {
           this.props.todos.map((todo, index) => {
             return (
               <li
                 className={todo.completed ? 'completed' : ''}
                 key={index}
-                onClick={() => this.handleClick(index)}
               >
+                <input type="checkbox" onClick={() => this.handleClick(index)}/>
                 {todo.text}
               </li>
             );

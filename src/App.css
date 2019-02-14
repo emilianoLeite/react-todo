@@ -9,3 +9,8 @@
   font-style: italic;
   text-decoration: line-through;
 }
+
+.todo-list li {
+ list-style-type: none;
+ margin-left: -19px;
+}
