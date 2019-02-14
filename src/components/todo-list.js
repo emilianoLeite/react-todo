@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
 export default class TodoList extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ export default class TodoList extends React.Component {
           this.props.todos.map((todo, index) => {
             return (
               <li
-                className={todo.completed ? 'completed' : ''}
+                className={todo.completed ? "completed" : ""}
                 key={index}
               >
                 <input type="checkbox" onClick={() => this.handleClick(index)}/>

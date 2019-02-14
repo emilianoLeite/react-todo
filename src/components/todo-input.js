@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
+import React from "react";
+import PropTypes from "prop-types";
 export default class TodoInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    this.state = { value: "" };
 
     this.ENTER_KEY = 13;
     this.handleKeyPress = this.handleKeyPress.bind(this);
@@ -21,7 +20,7 @@ export default class TodoInput extends React.Component {
     }
   }
 
-  clearInput(){ this.setState({ value: '' }); }
+  clearInput(){ this.setState({ value: "" }); }
 
   handleChange(event){
     this.setState({ value: event.target.value });

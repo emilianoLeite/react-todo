@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-import TodoInput from './components/todo-input';
-import TodoList from './components/todo-list';
-import Todo from './models/todo';
+import TodoInput from "./components/todo-input";
+import TodoList from "./components/todo-list";
+import Todo from "./models/todo";
 
 export default class App extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class App extends Component {
   }
 
   getTodos() {
-    const todosProps = JSON.parse(sessionStorage.getItem('todos-list'));
+    const todosProps = JSON.parse(sessionStorage.getItem("todos-list"));
 
     if (todosProps !== null) {
       return Todo.wrap(todosProps);
@@ -38,7 +38,7 @@ export default class App extends Component {
 
   commitChanges(todos) {
     this.setState({ todos });
-    sessionStorage.setItem('todos-list', JSON.stringify(todos));
+    sessionStorage.setItem("todos-list", JSON.stringify(todos));
   }
 
   render() { return (

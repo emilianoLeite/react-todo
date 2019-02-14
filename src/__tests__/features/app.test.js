@@ -15,23 +15,23 @@ afterEach(() => {
 });
 
 const createNewTodo = (todoText) => {
-  subject.find('TodoInput').simulate('keyPress', { target: { value: todoText }, keyCode: 13 });
+  subject.find("TodoInput").simulate("keyPress", { target: { value: todoText }, keyCode: 13 });
 };
 
-test('allows the creation and listing of todos', () => {
+test("allows the creation and listing of todos", () => {
   let currentSnapshot = renderer
     .create(subject)
     .toJSON();
   expect(currentSnapshot).toMatchSnapshot(); // No TODOs
 
-  createNewTodo('myNewTodo');
+  createNewTodo("myNewTodo");
 
   currentSnapshot = renderer
     .create(subject)
     .toJSON();
   expect(currentSnapshot).toMatchSnapshot(); // Shows created TODO
 
-  createNewTodo('myNewTodo2');
+  createNewTodo("myNewTodo2");
 
   currentSnapshot = renderer
     .create(subject)
