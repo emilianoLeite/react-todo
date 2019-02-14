@@ -5,7 +5,10 @@ import { shallow } from "enzyme";
 
 describe("when no todos are supplied", () => {
   it("renders a empty list", () => {
-    const wrapper = shallow(<TodoList onClickedTodo={() => { }} />);
+    const wrapper = shallow(<TodoList
+      onUpdateTodo={() => { }}
+      onClickedTodo={() => { }}
+    />);
 
     expect(wrapper.find("ul").children()).toHaveLength(0);
   });
@@ -18,7 +21,10 @@ describe("when some todos are supplied", () => {
       { text: "todo2", completed: true },
     ];
     const tree = renderer
-      .create(<TodoList onClickedTodo={() => { }} todos={todos} />)
+      .create(<TodoList
+        onUpdateTodo={() => { }}
+        onClickedTodo={() => { }} todos={todos}
+      />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -29,6 +35,7 @@ describe("when some todos are supplied", () => {
       const handleCompletedTodoCallback = jest.fn();
       const todos = [{text: "Todo", completed: false}];
       const wrapper = shallow(<TodoList
+        onUpdateTodo={() => { }}
         onClickedTodo={handleCompletedTodoCallback}
         todos={todos}
       />);

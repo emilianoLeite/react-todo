@@ -10,6 +10,7 @@ export default class App extends Component {
     this.setTodo = this.setTodo.bind(this);
     this.toggleTodoCompletion = this.toggleTodoCompletion.bind(this);
     this.commitChanges = this.commitChanges.bind(this);
+    this.handleUpdateTodo = this.handleUpdateTodo.bind(this);
   }
 
   getTodos() {
@@ -39,10 +40,17 @@ export default class App extends Component {
     sessionStorage.setItem("todos-list", JSON.stringify(todos));
   }
 
+  handleUpdateTodo(updatedTodo, index) {
+    const todos = this.state.todos;
+    todos[index] = updatedTodo;
+    this.commitChanges(todos);
+  }
+
   render() { return (
     <div className="App">
       <TodoInput onCreateTodo={this.setTodo}/>
       <TodoList
+        onUpdateTodo={this.handleUpdateTodo}
         onClickedTodo={this.toggleTodoCompletion}
         todos={this.state.todos}
       />

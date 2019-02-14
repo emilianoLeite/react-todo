@@ -4,7 +4,7 @@ import React from "react";
 export default class TodoInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: "" };
+    this.state = { value: props.value };
 
     this.ENTER_KEY = 13;
     this.handleKeyPress = this.handleKeyPress.bind(this);
@@ -31,6 +31,7 @@ export default class TodoInput extends React.Component {
     <input
       type='text'
       placeholder='New todo...'
+      autoFocus={true}
       value={this.state.value}
       onKeyPress={this.handleKeyPress}
       onChange={this.handleChange}
@@ -39,7 +40,12 @@ export default class TodoInput extends React.Component {
 }
 
 TodoInput.propTypes = {
+  value: PropTypes.string,
   onCreateTodo: PropTypes.func.isRequired
+};
+
+TodoInput.defaultProps = {
+  value: ""
 };
 
 

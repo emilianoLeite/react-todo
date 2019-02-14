@@ -5,6 +5,7 @@ exports[`allows the creation and listing of todos 1`] = `
   className="App"
 >
   <input
+    autoFocus={true}
     onChange={[Function]}
     onKeyPress={[Function]}
     placeholder="New todo..."
@@ -22,6 +23,7 @@ exports[`allows the creation and listing of todos 2`] = `
   className="App"
 >
   <input
+    autoFocus={true}
     onChange={[Function]}
     onKeyPress={[Function]}
     placeholder="New todo..."
@@ -40,10 +42,9 @@ exports[`allows the creation and listing of todos 2`] = `
       />
       <span
         className="todo-text"
+        onClick={[Function]}
       >
-         
         myNewTodo
-         
       </span>
     </li>
   </ul>
@@ -55,6 +56,7 @@ exports[`allows the creation and listing of todos 3`] = `
   className="App"
 >
   <input
+    autoFocus={true}
     onChange={[Function]}
     onKeyPress={[Function]}
     placeholder="New todo..."
@@ -73,10 +75,9 @@ exports[`allows the creation and listing of todos 3`] = `
       />
       <span
         className="todo-text"
+        onClick={[Function]}
       >
-         
         myNewTodo
-         
       </span>
     </li>
     <li
@@ -88,10 +89,9 @@ exports[`allows the creation and listing of todos 3`] = `
       />
       <span
         className="todo-text"
+        onClick={[Function]}
       >
-         
         myNewTodo2
-         
       </span>
     </li>
   </ul>

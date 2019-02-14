@@ -13,6 +13,10 @@ export default class TodoList extends React.Component {
     this.props.onClickedTodo(index);
   }
 
+  indexedHandleUpdateTodo(index) {
+    return (todo) => this.props.onUpdateTodo(todo, index);
+  }
+
   render() {
     return (
       <ul className="todo-list">
@@ -24,7 +28,10 @@ export default class TodoList extends React.Component {
                 key={index}
               >
                 <input type="checkbox" onClick={() => this.handleClick(index)} />
-                <Todo todo={todo}/>
+                <Todo
+                  onUpdateTodo={this.indexedHandleUpdateTodo(index)}
+                  todo={todo}
+                />
               </li>
             );
           })
@@ -39,7 +46,8 @@ TodoList.propTypes = {
     text: PropTypes.string.isRequired,
     completed: PropTypes.bool
   })),
-  onClickedTodo: PropTypes.func.isRequired
+  onClickedTodo: PropTypes.func.isRequired,
+  onUpdateTodo: PropTypes.func.isRequired
 };
 
 TodoList.defaultProps = {

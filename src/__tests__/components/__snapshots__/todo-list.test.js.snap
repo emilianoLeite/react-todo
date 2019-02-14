@@ -13,10 +13,9 @@ exports[`when some todos are supplied matches snapshot 1`] = `
     />
     <span
       className="todo-text"
+      onClick={[Function]}
     >
-       
       todo1
-       
     </span>
   </li>
   <li
@@ -28,10 +27,9 @@ exports[`when some todos are supplied matches snapshot 1`] = `
     />
     <span
       className="todo-text"
+      onClick={[Function]}
     >
-       
       todo2
-       
     </span>
   </li>
 </ul>

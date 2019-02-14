@@ -5,27 +5,26 @@ import { shallow } from "enzyme";
 
 test("renders correctly", () => {
   const todo = { text: "My Todo" };
-  const wrapper = shallow(<Todo todo={todo} />);
+  const wrapper = shallow(<Todo onUpdateTodo={() => { }} todo={todo} />);
   const tree = renderer.create(wrapper).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
 <span
   className="todo-text"
+  onClick={[Function]}
 >
-   
   My Todo
-   
 </span>
 `);
 });
 
-// describe('when a todo text is clicked', () => {
-//   test('renders a TodoInput in its place', () => {
-//     const todo = { text: 'My Todo' };
-//     const wrapper = shallow(<Todo todo={todo} />);
+describe("when the todo is clicked", () => {
+  it("renders a TodoInput in its place", () => {
+    const todo = { text: "My Todo" };
+    const wrapper = shallow(<Todo onUpdateTodo={() => { }} todo={todo} />);
 
-//     wrapper.find('span.todo-text').simulate('click');
+    wrapper.find("span.todo-text").simulate("click");
 
-//     expect(wrapper.find('TodoInput')).toHaveLength(1);
-//   });
-// });
+    expect(wrapper.find("TodoInput")).toHaveLength(1);
+  });
+});

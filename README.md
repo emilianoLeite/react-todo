@@ -5,15 +5,22 @@
 - [ ] Basic TODO app
   - [x] Create TODO
   - [x] List TODOs
-  - [ ] Update TODO
+  - [x] Update TODO
   - [x] Complete TODO
   - [ ] Filter TODOs
+  - [ ] Save TODOs in backend
+- [x] PropTypes
+- [ ] HOC
+- [X] PWA
 - [x] Enzyme
 - [x] Snapshot testing
 - [ ] CI
 - [ ] Redux
 - [ ] CSS modules
 - [ ] CSS-in-JS
+- [ ] Router
+- [ ] React Hooks
+- [ ] Re-open issue about `react-test-renderer` not rendering `key` prop
 - [ ] flow
 - [ ] typescript
 - [ ] GraphQL
