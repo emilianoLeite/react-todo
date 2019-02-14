@@ -1,36 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`when some todos are supplied matches snapshot 1`] = `
-<ul
+<div
   className="todo-list"
 >
-  <li
-    className=""
+  <div
+    className="filter-menu"
   >
-    <input
-      onClick={[Function]}
-      type="checkbox"
-    />
-    <span
-      className="todo-text"
+    <div
+      className="menu-item active"
       onClick={[Function]}
     >
-      todo1
-    </span>
-  </li>
-  <li
-    className="completed"
-  >
-    <input
-      onClick={[Function]}
-      type="checkbox"
-    />
-    <span
-      className="todo-text"
+       
+      All
+       
+    </div>
+    <div
+      className="menu-item"
       onClick={[Function]}
     >
-      todo2
-    </span>
-  </li>
-</ul>
+       
+      Incomplete
+       
+    </div>
+    <div
+      className="menu-item"
+      onClick={[Function]}
+    >
+       
+      Completed
+       
+    </div>
+  </div>
+  <ul>
+    <li
+      className=""
+    >
+      <input
+        onClick={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="todo-text"
+        onClick={[Function]}
+      >
+        todo1
+      </span>
+    </li>
+    <li
+      className="completed"
+    >
+      <input
+        onClick={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="todo-text"
+        onClick={[Function]}
+      >
+        todo2
+      </span>
+    </li>
+  </ul>
+</div>
 `;

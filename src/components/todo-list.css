@@ -1,0 +1,18 @@
+.filter-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.filter-menu .menu-item {
+  padding: 3px;
+  border: 1px solid black;
+  border-left: none;
+}
+
+.filter-menu > :first-child.menu-item {
+  border-left: 1px solid black;
+}
+
+.filter-menu .menu-item.active {
+  border-bottom: none;
+}

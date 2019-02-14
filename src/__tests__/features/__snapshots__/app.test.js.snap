@@ -2,7 +2,7 @@
 
 exports[`allows the creation and listing of todos 1`] = `
 <div
-  className="App"
+  className="app"
 >
   <input
     autoFocus={true}
@@ -12,15 +12,45 @@ exports[`allows the creation and listing of todos 1`] = `
     type="text"
     value=""
   />
-  <ul
+  <div
     className="todo-list"
-  />
+  >
+    <div
+      className="filter-menu"
+    >
+      <div
+        className="menu-item active"
+        onClick={[Function]}
+      >
+         
+        All
+         
+      </div>
+      <div
+        className="menu-item"
+        onClick={[Function]}
+      >
+         
+        Incomplete
+         
+      </div>
+      <div
+        className="menu-item"
+        onClick={[Function]}
+      >
+         
+        Completed
+         
+      </div>
+    </div>
+    <ul />
+  </div>
 </div>
 `;
 
 exports[`allows the creation and listing of todos 2`] = `
 <div
-  className="App"
+  className="app"
 >
   <input
     autoFocus={true}
@@ -30,30 +60,60 @@ exports[`allows the creation and listing of todos 2`] = `
     type="text"
     value=""
   />
-  <ul
+  <div
     className="todo-list"
   >
-    <li
-      className=""
+    <div
+      className="filter-menu"
     >
-      <input
-        onClick={[Function]}
-        type="checkbox"
-      />
-      <span
-        className="todo-text"
+      <div
+        className="menu-item active"
         onClick={[Function]}
       >
-        myNewTodo
-      </span>
-    </li>
-  </ul>
+         
+        All
+         
+      </div>
+      <div
+        className="menu-item"
+        onClick={[Function]}
+      >
+         
+        Incomplete
+         
+      </div>
+      <div
+        className="menu-item"
+        onClick={[Function]}
+      >
+         
+        Completed
+         
+      </div>
+    </div>
+    <ul>
+      <li
+        className=""
+      >
+        <input
+          onClick={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="todo-text"
+          onClick={[Function]}
+        >
+          myNewTodo
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`allows the creation and listing of todos 3`] = `
 <div
-  className="App"
+  className="app"
 >
   <input
     autoFocus={true}
@@ -63,37 +123,67 @@ exports[`allows the creation and listing of todos 3`] = `
     type="text"
     value=""
   />
-  <ul
+  <div
     className="todo-list"
   >
-    <li
-      className=""
+    <div
+      className="filter-menu"
     >
-      <input
-        onClick={[Function]}
-        type="checkbox"
-      />
-      <span
-        className="todo-text"
+      <div
+        className="menu-item active"
         onClick={[Function]}
       >
-        myNewTodo
-      </span>
-    </li>
-    <li
-      className=""
-    >
-      <input
-        onClick={[Function]}
-        type="checkbox"
-      />
-      <span
-        className="todo-text"
+         
+        All
+         
+      </div>
+      <div
+        className="menu-item"
         onClick={[Function]}
       >
-        myNewTodo2
-      </span>
-    </li>
-  </ul>
+         
+        Incomplete
+         
+      </div>
+      <div
+        className="menu-item"
+        onClick={[Function]}
+      >
+         
+        Completed
+         
+      </div>
+    </div>
+    <ul>
+      <li
+        className=""
+      >
+        <input
+          onClick={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="todo-text"
+          onClick={[Function]}
+        >
+          myNewTodo
+        </span>
+      </li>
+      <li
+        className=""
+      >
+        <input
+          onClick={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="todo-text"
+          onClick={[Function]}
+        >
+          myNewTodo2
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
