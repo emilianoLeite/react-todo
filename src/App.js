@@ -47,7 +47,7 @@ export default class App extends Component {
   }
 
   render() { return (
-    <div className="App">
+    <div className="app">
       <TodoInput onCreateTodo={this.setTodo}/>
       <TodoList
         onUpdateTodo={this.handleUpdateTodo}
