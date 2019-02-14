@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import Todo from "./todo";
+
 export default class TodoList extends React.Component {
   constructor(props) {
     super(props);
@@ -21,8 +23,8 @@ export default class TodoList extends React.Component {
                 className={todo.completed ? "completed" : ""}
                 key={index}
               >
-                <input type="checkbox" onClick={() => this.handleClick(index)}/>
-                {todo.text}
+                <input type="checkbox" onClick={() => this.handleClick(index)} />
+                <Todo todo={todo}/>
               </li>
             );
           })

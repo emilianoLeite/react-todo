@@ -11,7 +11,13 @@ exports[`when some todos are supplied matches snapshot 1`] = `
       onClick={[Function]}
       type="checkbox"
     />
-    todo1
+    <span
+      className="todo-text"
+    >
+       
+      todo1
+       
+    </span>
   </li>
   <li
     className="completed"
@@ -20,7 +26,13 @@ exports[`when some todos are supplied matches snapshot 1`] = `
       onClick={[Function]}
       type="checkbox"
     />
-    todo2
+    <span
+      className="todo-text"
+    >
+       
+      todo2
+       
+    </span>
   </li>
 </ul>
 `;

@@ -1,9 +1,7 @@
-import React, { Component } from "react";
 import "./App.css";
-
-import TodoInput from "./components/todo-input";
-import TodoList from "./components/todo-list";
-import Todo from "./models/todo";
+import React, { Component } from "react";
+import { TodoInput, TodoList } from "./components";
+import { Todo } from "./models";
 
 export default class App extends Component {
   constructor(props) {

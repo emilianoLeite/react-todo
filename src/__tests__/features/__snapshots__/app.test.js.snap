@@ -38,7 +38,13 @@ exports[`allows the creation and listing of todos 2`] = `
         onClick={[Function]}
         type="checkbox"
       />
-      myNewTodo
+      <span
+        className="todo-text"
+      >
+         
+        myNewTodo
+         
+      </span>
     </li>
   </ul>
 </div>
@@ -65,7 +71,13 @@ exports[`allows the creation and listing of todos 3`] = `
         onClick={[Function]}
         type="checkbox"
       />
-      myNewTodo
+      <span
+        className="todo-text"
+      >
+         
+        myNewTodo
+         
+      </span>
     </li>
     <li
       className=""
@@ -74,7 +86,13 @@ exports[`allows the creation and listing of todos 3`] = `
         onClick={[Function]}
         type="checkbox"
       />
-      myNewTodo2
+      <span
+        className="todo-text"
+      >
+         
+        myNewTodo2
+         
+      </span>
     </li>
   </ul>
 </div>

@@ -1,8 +1,7 @@
-import React from 'react';
-import { mount } from 'enzyme';
-import renderer from 'react-test-renderer';
-
-import App from '../../App';
+import App from "../../App";
+import React from "react";
+import { mount } from "enzyme";
+import renderer from "react-test-renderer";
 
 let subject;
 

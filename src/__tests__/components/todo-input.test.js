@@ -1,7 +1,7 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React from "react";
+import { TodoInput } from "../../components";
+import { shallow } from "enzyme";
 
-import TodoInput from '../../components/todo-input';
 
 
 describe("when the user presses the ENTER key inside the input", () => {
