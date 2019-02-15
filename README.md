@@ -8,8 +8,12 @@
   - [x] Update TODO
   - [x] Complete TODO
   - [ ] Filter TODOs
+    - [ ] Use `active` prop
+    - [ ] Tests
+    - [X] Render Props
   - [ ] Save TODOs in backend
 - [x] PropTypes
+- [x] Render Props
 - [ ] HOC
 - [X] PWA
 - [x] Enzyme

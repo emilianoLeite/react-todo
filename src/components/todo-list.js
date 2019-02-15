@@ -1,9 +1,8 @@
 import "./todo-list.css";
+import { Tab, TabMenu } from "./tab-menu";
 import PropTypes from "prop-types";
 import React from "react";
-
 import Todo from "./todo";
-import { Tab, TabMenu } from "./tab-menu";
 
 export default class TodoList extends React.Component {
   constructor(props) {
@@ -15,6 +14,9 @@ export default class TodoList extends React.Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.showAllTodos = this.showAllTodos.bind(this);
+    this.showCompletedTodos = this.showCompletedTodos.bind(this);
+    this.showIncompleteTodos = this.showIncompleteTodos.bind(this);
+
   }
 
   handleClick(index) {
@@ -26,15 +28,29 @@ export default class TodoList extends React.Component {
   }
 
   showAllTodos() {
+    return this.showTodos(this.props.todos);
+  }
+
+  showCompletedTodos() {
+    const todos = this.props.todos.filter((todo) => todo.completed);
+    return this.showTodos(todos);
+  }
+
+  showIncompleteTodos() {
+    const todos = this.props.todos.filter((todo) => !todo.completed);
+    return this.showTodos(todos);
+  }
+
+  showTodos(todos) {
     return <ul>
       {
-        this.props.todos.map((todo, index) => {
+        todos.map((todo, index) => {
           return (
             <li
               className={todo.completed ? "completed" : ""}
               key={index}
             >
-              <input type="checkbox" onClick={() => this.handleClick(index)} />
+              <input defaultChecked={todo.completed} type="checkbox" onClick={() => this.handleClick(index)} />
               <Todo
                 onUpdateTodo={this.indexedHandleUpdateTodo(index)}
                 todo={todo}
@@ -51,8 +67,8 @@ export default class TodoList extends React.Component {
       <div className="todo-list">
         <TabMenu >
           <Tab default name="All" render={this.showAllTodos} />
-          <Tab name="Completed" render={this.showAllTodos} />
-          <Tab name="Incomplete" render={this.showAllTodos} />
+          <Tab name="Completed" render={this.showCompletedTodos} />
+          <Tab name="Incomplete" render={this.showIncompleteTodos} />
         </TabMenu>
       </div>
     );
