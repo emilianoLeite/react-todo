@@ -21,6 +21,7 @@
 - [x] Enzyme
 - [x] Snapshot testing
 - [ ] CI
+- [ ] Flux
 - [ ] Redux
 - [ ] CSS modules
 - [ ] CSS-in-JS

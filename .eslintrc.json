@@ -58,6 +58,7 @@
             "error",
             "always"
         ],
+        "react/no-access-state-in-setstate": "error",
         "jest/consistent-test-it": "warn",
         "jest/expect-expect": "error",
         "jest/no-identical-title": "error",
