@@ -53,7 +53,7 @@ export default class TodoList extends React.Component {
   }
 
   render() { return (
-    <TabMenu>
+    <TabMenu className="filter-menu">
       <Tab active name="All" render={this.showAllTodos} />
       <Tab name="Incomplete" render={this.showIncompleteTodos} />
       <Tab name="Completed" render={this.showCompletedTodos} />

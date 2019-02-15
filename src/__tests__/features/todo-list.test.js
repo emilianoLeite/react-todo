@@ -6,7 +6,7 @@ describe("when a todo's checkbox is clicked", () => {
   it("emits the index of the clicked todo to the supplied callback", () => {
     const handleCompletedTodoCallback = jest.fn();
     const todos = [{ id: 1, text: "Todo", completed: false }];
-    const wrapper = mount(
+    const subject = mount(
       <TodoList
         onUpdateTodo={() => { }}
         onClickedTodo={handleCompletedTodoCallback}
@@ -14,7 +14,7 @@ describe("when a todo's checkbox is clicked", () => {
       />
     );
 
-    wrapper.find("input[type='checkbox']").simulate("click");
+    subject.find("input[type='checkbox']").simulate("click");
 
     expect(handleCompletedTodoCallback).toHaveBeenCalledWith({
       id: 1,
@@ -22,6 +22,6 @@ describe("when a todo's checkbox is clicked", () => {
       completed: false
     });
 
-    wrapper.unmount();
+    subject.unmount();
   });
 });

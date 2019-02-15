@@ -22,9 +22,9 @@ export class TabMenu extends Component {
     return React.Children.toArray(this.props.children);
   }
 
-  render() {
-    return (<div>
-      <div className="filter-menu">
+  render() { return (
+    <div>
+      <div className={this.props.className}>
         {
           this.children.map((C, index) => {
             return {
@@ -38,8 +38,8 @@ export class TabMenu extends Component {
         }
       </div>
       {this.children[this.state.currentTab].props.render()}
-    </div>);
-  }
+    </div>
+  );}
 }
 
 
