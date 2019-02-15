@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { TodoInput } from ".";
+import { Todo as TodoModel } from "../models";
 
 export default class Todo extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ export default class Todo extends React.Component {
   }
 
   handleTodoUpdate(todoText) {
-    const updatedTodo = { ...this.props.todo, text: todoText };
+    const updatedTodo = new TodoModel({ ...this.props.todo, text: todoText });
 
     this.props.onUpdateTodo(updatedTodo);
 

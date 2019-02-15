@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "shortid": "^2.2.14"
   },
   "devDependencies": {
     "enzyme": "^3.8.0",
