@@ -5,7 +5,7 @@ export class TabMenu extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { currentTab: this.children.findIndex(child => child.props.active) };
+    this.state = { currentTab: (this.children.findIndex(child => child.props.active) || 0) };
 
     this.classesFor = this.classesFor.bind(this);
   }
@@ -52,6 +52,7 @@ export class Tab extends Component {
 }
 
 TabMenu.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.element
