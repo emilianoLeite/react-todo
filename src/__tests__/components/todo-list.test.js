@@ -15,7 +15,10 @@ describe("when no todos are supplied", () => {
 
 describe("when some todos are supplied", () => {
   it("matches snapshot", () => {
-    const todos = [{ text: "todo1" }, { text: "todo2", completed: true }];
+    const todos = [
+      { id: 1, text: "todo1" },
+      { id: 2, text: "todo2", completed: true }
+    ];
     const tree = renderer
       .create(
         <TodoList

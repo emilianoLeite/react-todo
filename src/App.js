@@ -29,9 +29,10 @@ export default class App extends Component {
     this.commitChanges(todos);
   }
 
-  toggleTodoCompletion(todoIndex) {
-    const todos = this.state.todos;
-    todos[todoIndex] = todos[todoIndex].toggleCompletion();
+  toggleTodoCompletion(clickedTodo) {
+    const { todos } = this.state;
+    const index = todos.findIndex(todo => todo.id === clickedTodo.id);
+    todos[index] = clickedTodo.toggleCompletion();
     this.commitChanges(todos);
   }
 
@@ -40,8 +41,9 @@ export default class App extends Component {
     sessionStorage.setItem("todos-list", JSON.stringify(todos));
   }
 
-  handleUpdateTodo(updatedTodo, index) {
-    const todos = this.state.todos;
+  handleUpdateTodo(updatedTodo) {
+    const { todos } = this.state;
+    const index = todos.findIndex(todo => todo.id === updatedTodo.id);
     todos[index] = updatedTodo;
     this.commitChanges(todos);
   }

@@ -6,12 +6,14 @@
   - [x] Create TODO
   - [x] List TODOs
   - [x] Update TODO
+    - [x] Fix bug (don't use array position to identify TODO)
   - [x] Complete TODO
   - [ ] Filter TODOs
     - [ ] Use `active` prop
     - [ ] Tests
     - [X] Render Props
   - [ ] Save TODOs in backend
+  - [ ] use `setState` with callback when commiting changes
 - [x] PropTypes
 - [x] Render Props
 - [ ] HOC
