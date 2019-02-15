@@ -5,10 +5,9 @@ import { shallow } from "enzyme";
 
 describe("when no todos are supplied", () => {
   it("renders a empty list", () => {
-    const wrapper = shallow(<TodoList
-      onUpdateTodo={() => { }}
-      onClickedTodo={() => { }}
-    />);
+    const wrapper = shallow(
+      <TodoList onUpdateTodo={() => {}} onClickedTodo={() => {}} />
+    );
 
     expect(wrapper.find("ul").children()).toHaveLength(0);
   });
@@ -16,33 +15,17 @@ describe("when no todos are supplied", () => {
 
 describe("when some todos are supplied", () => {
   it("matches snapshot", () => {
-    const todos = [
-      { text: "todo1" },
-      { text: "todo2", completed: true },
-    ];
+    const todos = [{ text: "todo1" }, { text: "todo2", completed: true }];
     const tree = renderer
-      .create(<TodoList
-        onUpdateTodo={() => { }}
-        onClickedTodo={() => { }} todos={todos}
-      />)
+      .create(
+        <TodoList
+          onUpdateTodo={() => {}}
+          onClickedTodo={() => {}}
+          todos={todos}
+        />
+      )
       .toJSON();
 
     expect(tree).toMatchSnapshot();
-  });
-
-  describe("when a todo's checkbox is clicked", () => {
-    it("emits the index of the clicked todo to the supplied callback", () => {
-      const handleCompletedTodoCallback = jest.fn();
-      const todos = [{text: "Todo", completed: false}];
-      const wrapper = shallow(<TodoList
-        onUpdateTodo={() => { }}
-        onClickedTodo={handleCompletedTodoCallback}
-        todos={todos}
-      />);
-
-      wrapper.find("input[type='checkbox']").simulate("click");
-
-      expect(handleCompletedTodoCallback).toHaveBeenCalledWith(0);
-    });
   });
 });

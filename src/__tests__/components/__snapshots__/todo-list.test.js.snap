@@ -4,63 +4,60 @@ exports[`when some todos are supplied matches snapshot 1`] = `
 <div
   className="todo-list"
 >
-  <div
-    className="filter-menu"
-  >
+  <div>
     <div
-      className="menu-item active"
-      onClick={[Function]}
+      className="filter-menu"
     >
-       
-      All
-       
+      <div
+        className="menu-item active"
+        onClick={[Function]}
+      >
+        All
+      </div>
+      <div
+        className="menu-item"
+        onClick={[Function]}
+      >
+        Completed
+      </div>
+      <div
+        className="menu-item"
+        onClick={[Function]}
+      >
+        Incomplete
+      </div>
     </div>
-    <div
-      className="menu-item"
-      onClick={[Function]}
-    >
-       
-      Incomplete
-       
-    </div>
-    <div
-      className="menu-item"
-      onClick={[Function]}
-    >
-       
-      Completed
-       
-    </div>
+    <ul>
+      <li
+        className=""
+      >
+        <input
+          onClick={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="todo-text"
+          onClick={[Function]}
+        >
+          todo1
+        </span>
+      </li>
+      <li
+        className="completed"
+      >
+        <input
+          defaultChecked={true}
+          onClick={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="todo-text"
+          onClick={[Function]}
+        >
+          todo2
+        </span>
+      </li>
+    </ul>
   </div>
-  <ul>
-    <li
-      className=""
-    >
-      <input
-        onClick={[Function]}
-        type="checkbox"
-      />
-      <span
-        className="todo-text"
-        onClick={[Function]}
-      >
-        todo1
-      </span>
-    </li>
-    <li
-      className="completed"
-    >
-      <input
-        onClick={[Function]}
-        type="checkbox"
-      />
-      <span
-        className="todo-text"
-        onClick={[Function]}
-      >
-        todo2
-      </span>
-    </li>
-  </ul>
 </div>
 `;

@@ -15,35 +15,31 @@ exports[`allows the creation and listing of todos 1`] = `
   <div
     className="todo-list"
   >
-    <div
-      className="filter-menu"
-    >
+    <div>
       <div
-        className="menu-item active"
-        onClick={[Function]}
+        className="filter-menu"
       >
-         
-        All
-         
+        <div
+          className="menu-item active"
+          onClick={[Function]}
+        >
+          All
+        </div>
+        <div
+          className="menu-item"
+          onClick={[Function]}
+        >
+          Completed
+        </div>
+        <div
+          className="menu-item"
+          onClick={[Function]}
+        >
+          Incomplete
+        </div>
       </div>
-      <div
-        className="menu-item"
-        onClick={[Function]}
-      >
-         
-        Incomplete
-         
-      </div>
-      <div
-        className="menu-item"
-        onClick={[Function]}
-      >
-         
-        Completed
-         
-      </div>
+      <ul />
     </div>
-    <ul />
   </div>
 </div>
 `;
@@ -63,50 +59,46 @@ exports[`allows the creation and listing of todos 2`] = `
   <div
     className="todo-list"
   >
-    <div
-      className="filter-menu"
-    >
+    <div>
       <div
-        className="menu-item active"
-        onClick={[Function]}
+        className="filter-menu"
       >
-         
-        All
-         
-      </div>
-      <div
-        className="menu-item"
-        onClick={[Function]}
-      >
-         
-        Incomplete
-         
-      </div>
-      <div
-        className="menu-item"
-        onClick={[Function]}
-      >
-         
-        Completed
-         
-      </div>
-    </div>
-    <ul>
-      <li
-        className=""
-      >
-        <input
-          onClick={[Function]}
-          type="checkbox"
-        />
-        <span
-          className="todo-text"
+        <div
+          className="menu-item active"
           onClick={[Function]}
         >
-          myNewTodo
-        </span>
-      </li>
-    </ul>
+          All
+        </div>
+        <div
+          className="menu-item"
+          onClick={[Function]}
+        >
+          Completed
+        </div>
+        <div
+          className="menu-item"
+          onClick={[Function]}
+        >
+          Incomplete
+        </div>
+      </div>
+      <ul>
+        <li
+          className=""
+        >
+          <input
+            onClick={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="todo-text"
+            onClick={[Function]}
+          >
+            myNewTodo
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;
@@ -126,64 +118,60 @@ exports[`allows the creation and listing of todos 3`] = `
   <div
     className="todo-list"
   >
-    <div
-      className="filter-menu"
-    >
+    <div>
       <div
-        className="menu-item active"
-        onClick={[Function]}
+        className="filter-menu"
       >
-         
-        All
-         
+        <div
+          className="menu-item active"
+          onClick={[Function]}
+        >
+          All
+        </div>
+        <div
+          className="menu-item"
+          onClick={[Function]}
+        >
+          Completed
+        </div>
+        <div
+          className="menu-item"
+          onClick={[Function]}
+        >
+          Incomplete
+        </div>
       </div>
-      <div
-        className="menu-item"
-        onClick={[Function]}
-      >
-         
-        Incomplete
-         
-      </div>
-      <div
-        className="menu-item"
-        onClick={[Function]}
-      >
-         
-        Completed
-         
-      </div>
+      <ul>
+        <li
+          className=""
+        >
+          <input
+            onClick={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="todo-text"
+            onClick={[Function]}
+          >
+            myNewTodo
+          </span>
+        </li>
+        <li
+          className=""
+        >
+          <input
+            onClick={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="todo-text"
+            onClick={[Function]}
+          >
+            myNewTodo2
+          </span>
+        </li>
+      </ul>
     </div>
-    <ul>
-      <li
-        className=""
-      >
-        <input
-          onClick={[Function]}
-          type="checkbox"
-        />
-        <span
-          className="todo-text"
-          onClick={[Function]}
-        >
-          myNewTodo
-        </span>
-      </li>
-      <li
-        className=""
-      >
-        <input
-          onClick={[Function]}
-          type="checkbox"
-        />
-        <span
-          className="todo-text"
-          onClick={[Function]}
-        >
-          myNewTodo2
-        </span>
-      </li>
-    </ul>
   </div>
 </div>
 `;
