@@ -9,7 +9,7 @@
     - [x] Fix bug (don't use array position to identify TODO)
   - [x] Complete TODO
   - [ ] Filter TODOs
-    - [ ] Use `active` prop
+    - [x] Use `active` prop
     - [ ] Tests
     - [X] Render Props
   - [ ] Save TODOs in backend

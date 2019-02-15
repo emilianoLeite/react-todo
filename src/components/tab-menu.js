@@ -5,7 +5,8 @@ export class TabMenu extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { currentTab: 0 };
+    this.state = { currentTab: this.children.findIndex(child => child.props.active) };
+
     this.classesFor = this.classesFor.bind(this);
   }
 
@@ -17,12 +18,15 @@ export class TabMenu extends Component {
     }
   }
 
+  get children() {
+    return React.Children.toArray(this.props.children);
+  }
+
   render() {
-    const children = React.Children.toArray(this.props.children);
     return (<div>
       <div className="filter-menu">
         {
-          children.map((C, index) => {
+          this.children.map((C, index) => {
             return {
               ...C, props: {
                 ...C.props,
@@ -33,7 +37,7 @@ export class TabMenu extends Component {
           })
         }
       </div>
-      {children[this.state.currentTab].props.render()}
+      {this.children[this.state.currentTab].props.render()}
     </div>);
   }
 }
