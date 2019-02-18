@@ -21,11 +21,7 @@ export default class App extends Component {
   async getTodos() {
     const todosProps = await this.props.repo.getTodos();
 
-    if (todosProps != null) {
-      return Todo.wrap(todosProps);
-    } else {
-      return [];
-    }
+    return Todo.wrap(todosProps);
   }
 
   setTodo(todoText) {

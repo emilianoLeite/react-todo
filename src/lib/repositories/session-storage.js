@@ -7,7 +7,13 @@ export default class SessionStorage extends Repository {
   }
 
   getTodos() {
-    return JSON.parse(sessionStorage.getItem(this.config.keyName));
+    const todos = sessionStorage.getItem(this.config.keyName);
+
+    if (todos != null) {
+      return JSON.parse(todos);
+    } else {
+      return [];
+    }
   }
 
   setTodos(todos) {
