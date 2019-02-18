@@ -51,14 +51,16 @@ export default class App extends Component {
   }
 
   render() { return (
-    <div className="app">
-      <TodoInput onCreateTodo={this.setTodo}/>
-      <TodoList
-        onUpdateTodo={this.handleUpdateTodo}
-        onClickedTodo={this.toggleTodoCompletion}
-        todos={this.state.todos}
-      />
-    </div>
+    <React.StrictMode>
+      <div className="app">
+        <TodoInput onCreateTodo={this.setTodo}/>
+        <TodoList
+          onUpdateTodo={this.handleUpdateTodo}
+          onClickedTodo={this.toggleTodoCompletion}
+          todos={this.state.todos}
+        />
+      </div>
+    </React.StrictMode>
   );}
 }
 
