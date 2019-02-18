@@ -1,12 +1,13 @@
 import App from "../../App";
 import React from "react";
+import { SessionStorage } from "../../lib/repositories";
 import { mount } from "enzyme";
 import renderer from "react-test-renderer";
 
 let subject;
 
 beforeEach(() => {
-  subject = mount(<App />);
+  subject = mount(<App repo={new SessionStorage()} />);
 });
 
 afterEach(() => {

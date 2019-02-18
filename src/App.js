@@ -1,12 +1,14 @@
 import "./App.css";
 import React, { Component } from "react";
 import { TodoInput, TodoList } from "./components";
+import PropTypes from "prop-types";
 import { Todo } from "./models";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { todos: this.getTodos() };
+
     this.setTodo = this.setTodo.bind(this);
     this.toggleTodoCompletion = this.toggleTodoCompletion.bind(this);
     this.commitChanges = this.commitChanges.bind(this);
@@ -14,9 +16,9 @@ export default class App extends Component {
   }
 
   getTodos() {
-    const todosProps = JSON.parse(sessionStorage.getItem("todos-list"));
+    const todosProps = this.props.repo.getTodos();
 
-    if (todosProps !== null) {
+    if (todosProps != null) {
       return Todo.wrap(todosProps);
     } else {
       return [];
@@ -38,7 +40,7 @@ export default class App extends Component {
 
   commitChanges(todos) {
     this.setState({ todos });
-    sessionStorage.setItem("todos-list", JSON.stringify(todos));
+    this.props.repo.setTodos(todos);
   }
 
   handleUpdateTodo(updatedTodo) {
@@ -59,3 +61,7 @@ export default class App extends Component {
     </div>
   );}
 }
+
+App.propTypes = {
+  repo: PropTypes.any,
+};
