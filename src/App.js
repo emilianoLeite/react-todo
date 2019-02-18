@@ -7,16 +7,19 @@ import { Todo } from "./models";
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { todos: this.getTodos() };
-
+    this.state = { todos: [] };
     this.setTodo = this.setTodo.bind(this);
     this.toggleTodoCompletion = this.toggleTodoCompletion.bind(this);
     this.commitChanges = this.commitChanges.bind(this);
     this.handleUpdateTodo = this.handleUpdateTodo.bind(this);
   }
 
-  getTodos() {
-    const todosProps = this.props.repo.getTodos();
+  componentDidMount() {
+    this.getTodos().then(todos => this.setState({ todos }));
+  }
+
+  async getTodos() {
+    const todosProps = await this.props.repo.getTodos();
 
     if (todosProps != null) {
       return Todo.wrap(todosProps);

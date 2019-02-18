@@ -1,2 +1,4 @@
+import RestApi from "./rest-api";
 import SessionStorage from "./session-storage";
-export { SessionStorage };
+
+export { SessionStorage, RestApi };
