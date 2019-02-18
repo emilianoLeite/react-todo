@@ -13,7 +13,7 @@
     - [ ] Tests
     - [X] Render Props
     - [ ] Use HOC to decorate `Tab` comp
-    - [ ] Use Fragments to render `Tab`s
+    - [x] Use Fragments to render `Tab`s
   - [X] Save TODOs in backend
     - [X] Standarize Repo's interface
   - [ ] use `setState` with callback when commiting changes

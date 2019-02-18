@@ -23,7 +23,7 @@ export class TabMenu extends Component {
   }
 
   render() { return (
-    <div>
+    <React.Fragment>
       <div className={this.props.className}>
         {
           this.children.map((C, index) => {
@@ -38,7 +38,7 @@ export class TabMenu extends Component {
         }
       </div>
       {this.children[this.state.currentTab].props.render()}
-    </div>
+    </React.Fragment>
   );}
 }
 

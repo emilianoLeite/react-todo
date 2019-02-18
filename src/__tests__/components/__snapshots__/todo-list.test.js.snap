@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`when some todos are supplied matches snapshot 1`] = `
-<div>
+Array [
   <div
     className="filter-menu"
   >
@@ -23,7 +23,7 @@ exports[`when some todos are supplied matches snapshot 1`] = `
     >
       Completed
     </div>
-  </div>
+  </div>,
   <ul
     className="todo-list"
   >
@@ -56,6 +56,6 @@ exports[`when some todos are supplied matches snapshot 1`] = `
         todo2
       </span>
     </li>
-  </ul>
-</div>
+  </ul>,
+]
 `;
