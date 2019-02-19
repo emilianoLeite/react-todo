@@ -12,14 +12,12 @@
     - [x] Use `active` prop
     - [ ] Tests
     - [X] Render Props
-    - [ ] Use HOC to decorate `Tab` comp
     - [x] Use Fragments to render `Tab`s
   - [X] Save TODOs in backend
     - [X] Standarize Repo's interface
   - [ ] use `setState` with callback when commiting changes
 - [x] PropTypes
 - [x] Render Props
-- [ ] HOC
 - [X] PWA
 - [x] Enzyme
 - [x] Snapshot testing
@@ -30,11 +28,12 @@
 - [ ] CSS-in-JS
 - [ ] Router
 - [ ] React Hooks
-- [ ] Re-open issue about `react-test-renderer` not rendering `key` prop. [GH issue](https://github.com/facebook/react/issues/11808)
 - [ ] typescript
 - [ ] GraphQL
 - [ ] react-testing-library
 - [ ] Read React docs
+- [ ] HOC
+- [ ] Re-open issue about `react-test-renderer` not rendering `key` prop. [GH issue](https://github.com/facebook/react/issues/11808)
 
 __________
 
