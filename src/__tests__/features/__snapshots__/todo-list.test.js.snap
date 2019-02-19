@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`filters shows only the TODOs corresponding to the selected filter 1`] = `
+<div
+  className="filter-menu"
+>
+  <div>
+    <div
+      className="menu-item active"
+      onClick={[Function]}
+    >
+      All
+    </div>
+    <div
+      className="menu-item"
+      onClick={[Function]}
+    >
+      Incomplete
+    </div>
+    <div
+      className="menu-item"
+      onClick={[Function]}
+    >
+      Completed
+    </div>
+  </div>
+  <ul
+    className="todo-list"
+  >
+    <li
+      className=""
+    >
+      <input
+        defaultChecked={false}
+        onClick={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="todo-text"
+        onClick={[Function]}
+      >
+        Todo1
+      </span>
+    </li>
+    <li
+      className="completed"
+    >
+      <input
+        defaultChecked={true}
+        onClick={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="todo-text"
+        onClick={[Function]}
+      >
+        Todo2
+      </span>
+    </li>
+  </ul>
+</div>
+`;

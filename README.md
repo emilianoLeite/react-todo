@@ -31,7 +31,6 @@
 - [ ] Router
 - [ ] React Hooks
 - [ ] Re-open issue about `react-test-renderer` not rendering `key` prop. [GH issue](https://github.com/facebook/react/issues/11808)
-- [ ] flow
 - [ ] typescript
 - [ ] GraphQL
 - [ ] react-testing-library
