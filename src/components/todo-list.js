@@ -3,8 +3,10 @@ import { Tab, TabMenu } from "./tab-menu";
 import PropTypes from "prop-types";
 import React from "react";
 import Todo from "./todo";
+import { Todo as TodoModel } from "../models";
+import { connect } from "react-redux";
 
-export default class TodoList extends React.Component {
+class TodoList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -73,3 +75,6 @@ TodoList.propTypes = {
 TodoList.defaultProps = {
   todos: []
 };
+
+const mapStateToProps = ({ todos }) => ({ todos: TodoModel.wrap(todos) });
+export default connect(mapStateToProps)(TodoList);

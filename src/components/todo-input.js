@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { addTodo } from "../reducers/reducer";
+import { connect } from "react-redux";
 
-export default class TodoInput extends React.Component {
+
+class TodoInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: props.value };
@@ -16,7 +19,7 @@ export default class TodoInput extends React.Component {
     const pressedKey = (event.keyCode ? event.keyCode : event.which);
 
     if (pressedKey === this.ENTER_KEY) {
-      this.props.onCreateTodo(event.target.value);
+      this.props.addTodo(event.target.value);
       this.clearInput();
     }
   }
@@ -41,11 +44,12 @@ export default class TodoInput extends React.Component {
 
 TodoInput.propTypes = {
   value: PropTypes.string,
-  onCreateTodo: PropTypes.func.isRequired
+  onCreateTodo: PropTypes.func.isRequired,
+  addTodo: PropTypes.func
 };
 
 TodoInput.defaultProps = {
   value: ""
 };
 
-
+export default connect(() => ({}), { addTodo })(TodoInput);

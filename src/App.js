@@ -2,6 +2,7 @@ import "./App.css";
 import React, { Component } from "react";
 import { TodoInput, TodoList } from "./components";
 import PropTypes from "prop-types";
+import { Provider } from "react-redux";
 import { Todo } from "./models";
 
 export default class App extends Component {
@@ -51,18 +52,21 @@ export default class App extends Component {
 
   render() { return (
     <React.StrictMode>
-      <div className="app">
-        <TodoInput onCreateTodo={this.setTodo}/>
-        <TodoList
-          onUpdateTodo={this.handleUpdateTodo}
-          onClickedTodo={this.toggleTodoCompletion}
-          todos={this.state.todos}
-        />
-      </div>
+      <Provider store={this.props.store}>
+        <div className="app">
+          <TodoInput onCreateTodo={this.setTodo}/>
+          <TodoList
+            onUpdateTodo={this.handleUpdateTodo}
+            onClickedTodo={this.toggleTodoCompletion}
+            todos={this.state.todos}
+          />
+        </div>
+      </Provider>
     </React.StrictMode>
-  );}
+  ); }
 }
 
 App.propTypes = {
   repo: PropTypes.any,
+  store: PropTypes.any,
 };

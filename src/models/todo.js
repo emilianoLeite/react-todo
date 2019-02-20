@@ -5,7 +5,6 @@ export default class Todo {
     return arrayOfTodoProps.map(todoProps => new Todo(todoProps));
   }
 
-
   constructor({ id, text, completed }) {
     this.id = (id || shortid.generate());
     this.text = text;
