@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { addTodo } from "../reducers/reducer";
+import { Todo } from "../models";
+import { addTodo } from "../redux/actions";
 import { connect } from "react-redux";
-
 
 class TodoInput extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class TodoInput extends React.Component {
     const pressedKey = (event.keyCode ? event.keyCode : event.which);
 
     if (pressedKey === this.ENTER_KEY) {
-      this.props.addTodo(event.target.value);
+      this.props.addTodo(new Todo({ text: event.target.value }));
       this.clearInput();
     }
   }
