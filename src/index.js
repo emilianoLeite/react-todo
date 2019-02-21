@@ -5,14 +5,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 // import { SessionStorage as Repository } from "./lib/repositories";
 import { RestApi as Repository } from "./lib/repositories";
-import { createStore } from "redux";
-import reducer from "./reducers/reducer";
 
-const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-ReactDOM.render(<App store={store} repo={new Repository()} />, document.getElementById("root"));
+ReactDOM.render(<App repo={new Repository()} />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

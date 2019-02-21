@@ -4,11 +4,18 @@ import { TodoInput, TodoList } from "./components";
 import PropTypes from "prop-types";
 import { Provider } from "react-redux";
 import { Todo } from "./models";
+import { createStore } from "redux";
+import reducer from "./redux/reducers/reducer";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { todos: [] };
+    this.store = createStore(
+      reducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    );
+
     this.setTodo = this.setTodo.bind(this);
     this.toggleTodoCompletion = this.toggleTodoCompletion.bind(this);
     this.commitChanges = this.commitChanges.bind(this);
@@ -52,7 +59,7 @@ export default class App extends Component {
 
   render() { return (
     <React.StrictMode>
-      <Provider store={this.props.store}>
+      <Provider store={this.store}>
         <div className="app">
           <TodoInput onCreateTodo={this.setTodo}/>
           <TodoList
