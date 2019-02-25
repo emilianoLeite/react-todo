@@ -38,13 +38,6 @@ export default class App extends Component {
     this.commitChanges(todos);
   }
 
-  toggleTodoCompletion(clickedTodo) {
-    const { todos } = this.state;
-    const index = todos.findIndex(todo => todo.id === clickedTodo.id);
-    todos[index] = clickedTodo.toggleCompletion();
-    this.commitChanges(todos);
-  }
-
   commitChanges(todos) {
     this.setState({ todos });
     this.props.repo.setTodos(todos);
@@ -64,7 +57,6 @@ export default class App extends Component {
           <TodoInput onCreateTodo={this.setTodo}/>
           <TodoList
             onUpdateTodo={this.handleUpdateTodo}
-            onClickedTodo={this.toggleTodoCompletion}
             todos={this.state.todos}
           />
         </div>

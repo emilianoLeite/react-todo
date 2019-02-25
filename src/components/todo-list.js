@@ -5,6 +5,7 @@ import React from "react";
 import Todo from "./todo";
 import { Todo as TodoModel } from "../models";
 import { connect } from "react-redux";
+import { toggleTodo } from "../redux/actions";
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class TodoList extends React.Component {
               <input
                 defaultChecked={todo.completed}
                 type="checkbox"
-                onClick={() => this.props.onClickedTodo(todo)}
+                onClick={() => this.props.toggleTodo(todo)}
               />
               <Todo
                 onUpdateTodo={this.props.onUpdateTodo}
@@ -68,8 +69,8 @@ TodoList.propTypes = {
     text: PropTypes.string.isRequired,
     completed: PropTypes.bool
   })),
-  onClickedTodo: PropTypes.func.isRequired,
-  onUpdateTodo: PropTypes.func.isRequired
+  onUpdateTodo: PropTypes.func.isRequired,
+  toggleTodo: PropTypes.func,
 };
 
 TodoList.defaultProps = {
@@ -77,4 +78,4 @@ TodoList.defaultProps = {
 };
 
 const mapStateToProps = ({ todos }) => ({ todos: TodoModel.wrap(todos) });
-export default connect(mapStateToProps)(TodoList);
+export default connect(mapStateToProps, { toggleTodo })(TodoList);
